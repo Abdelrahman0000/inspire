@@ -24,15 +24,17 @@ export default function Certificate() {
             </Link>
           </Reveal>
           <Reveal className="min-w-0" delay={0.1}>
-            <figure className="mx-auto w-full max-w-md">
-              <img
-                src="/gallery/certificates.jpg"
-                alt={t.certTitle}
-                loading="lazy"
-                decoding="async"
-                className="h-auto max-h-[70vh] w-full rounded-[28px] object-contain shadow-[0_30px_80px_rgba(0,0,0,.35)]"
-              />
-            </figure>
+            <div className="grid grid-cols-2 gap-3">
+              {["/gallery/cert-2026-a.jpg", "/gallery/cert-2026-b.jpg"].map((src) => (
+                <img
+                  key={src}
+                  src={src}
+                  alt={t.certTitle}
+                  decoding="async"
+                  className="h-36 w-full rounded-[24px] bg-card object-contain sm:h-52 lg:h-64"
+                />
+              ))}
+            </div>
           </Reveal>
         </div>
         <div className="mx-auto mt-8 grid max-w-6xl gap-4 sm:grid-cols-2">

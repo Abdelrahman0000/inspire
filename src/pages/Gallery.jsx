@@ -12,6 +12,7 @@ export default function Gallery() {
     ["all", t.all],
     ["lecture", t.lecture],
     ["practice", t.practice],
+    ["profile", t.profiles],
     ["certificate", t.certificate],
   ]
   const items = gallery.filter((item) => filter === "all" || item.cat === filter)
@@ -57,7 +58,9 @@ export default function Gallery() {
                       alt={item[lang]}
                       loading="lazy"
                       decoding="async"
-                      className="max-h-[520px] w-full object-cover transition-transform duration-300 hover:scale-[1.03]"
+                      className={`w-full rounded-[24px] ${
+                        item.cat === "profile" ? "bg-card object-contain" : "max-h-[520px] object-cover"
+                      }`}
                     />
                     <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-shade to-transparent p-4 text-sm text-white">
                       {item[lang]}

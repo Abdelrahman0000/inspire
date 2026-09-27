@@ -9,7 +9,6 @@ const film = [
   "injection.jpg",
   "suture-demo.jpg",
   "nutrition-class.jpg",
-  "certificates.jpg",
   "check-call-care.jpg",
   "hall-balcony.jpg",
   "bp-measure.jpg",

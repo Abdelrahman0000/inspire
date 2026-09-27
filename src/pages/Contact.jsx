@@ -17,7 +17,7 @@ export default function Contact() {
     const track = courses.find((course) => course.id === form.track)
     const text =
       lang === "ar"
-        ? `مرحبًا، أنا ${form.name}.\nالموبايل: ${form.phone}\nالمسار: ${pick(track.title, lang)}\n${form.message}`
+        ? `مرحبًا، أنا ${form.name}.\nالهاتف: ${form.phone}\nالمسار: ${pick(track.title, lang)}\n${form.message}`
         : `Hello, I'm ${form.name}.\nMobile: ${form.phone}\nTrack: ${pick(track.title, lang)}\n${form.message}`
     window.open(`${links.whatsapp}?text=${encodeURIComponent(text)}`, "_blank", "noopener,noreferrer")
   }
