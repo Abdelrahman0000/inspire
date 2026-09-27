@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #040910;
+  --fg: #f5f8fc;
+  --muted: rgb(245 248 252 / 0.78);
+  --soft: rgb(245 248 252 / 0.62);
+  --faint: rgb(245 248 252 / 0.48);
+  --panel: rgb(7 17 31 / 0.82);
+  --card: rgb(255 255 255 / 0.05);
+  --line: rgb(255 255 255 / 0.14);
+  --nav: rgb(7 17 31 / 0.9);
+  --shade: #040910;
+  color-scheme: dark;
+}
+
+html[data-theme="light"] {
+  --bg: #eef3f6;
+  --fg: #122033;
+  --muted: rgb(18 32 51 / 0.74);
+  --soft: rgb(18 32 51 / 0.58);
+  --faint: rgb(18 32 51 / 0.46);
+  --panel: rgb(255 255 255 / 0.84);
+  --card: rgb(255 255 255 / 0.72);
+  --line: rgb(16 40 58 / 0.12);
+  --nav: rgb(247 251 252 / 0.92);
+  --shade: #10283a;
+  --color-cyan: #0c7490;
+  color-scheme: light;
+}
+
+@theme inline {
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-soft: var(--soft);
+  --color-faint: var(--faint);
+  --color-panel: var(--panel);
+  --color-card: var(--card);
+  --color-line: var(--line);
+  --color-nav: var(--nav);
+  --color-shade: var(--shade);
+}
+
+@theme {
+  --font-cairo: "Cairo", Tahoma, sans-serif;
+  --font-outfit: "Outfit", "Segoe UI", sans-serif;
+  --font-syne: "Syne", "Outfit", sans-serif;
+  --color-ink: #07111f;
+  --color-deep: #040910;
+  --color-cyan: #3ad1ef;
+  --color-foam: #d7f4fb;
+  --color-rose: #e23b57;
+  --color-blood: #8e1730;
+  --color-paper: #f3efe6;
+  --color-gold: #d4b483;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: Outfit, "Segoe UI", Tahoma, sans-serif;
+  text-rendering: optimizeLegibility;
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+html[lang="ar"] body {
+  font-family: Cairo, Tahoma, sans-serif;
+}
+
+::selection {
+  background: #e23b57;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1b3c4c;
+  border-radius: 99px;
+}
+
+img {
+  max-width: 100%;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.font-syne {
+  font-family: Syne, Outfit, sans-serif;
+}
+
+.num {
+  direction: ltr;
+  unicode-bidi: isolate;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Cairo Black paints outside a Latin-tight line box, so Arabic display
+   lines collide. English keeps the tight leading utilities. */
+html[lang="ar"] :is(h1, h2, h3, .font-black, .font-bold) {
+  line-height: 1.45;
+}
+
+html[lang="ar"] .kicker,
+html[lang="ar"] .marquee span {
+  letter-spacing: 0;
+  text-transform: none;
+}

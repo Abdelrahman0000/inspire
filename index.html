@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#07111f" />
+    <meta
+      name="description"
+      content="Inspire — Salvation gate in first aid. دورة إسعافات أولية وتغذية وتحاليل وOTC مع فريق إنسباير، شهادة من نقابة الأطباء."
+    />
+    <title>Inspire | بوابة النجاة في الإسعافات الأولية</title>
+    <link rel="icon" href="/brand/logo.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Outfit:wght@400;600&family=Syne:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      try {
+        var lang = localStorage.getItem('inspire-lang') || 'ar'
+        var theme = localStorage.getItem('inspire-theme') === 'light' ? 'light' : 'dark'
+        document.documentElement.lang = lang
+        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr'
+        document.documentElement.dataset.theme = theme
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
